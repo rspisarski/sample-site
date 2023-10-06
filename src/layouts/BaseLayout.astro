@@ -1,0 +1,25 @@
+---
+import SEO from "../components/SEO.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const { pageTitle, SeoDescription } = Astro.props;
+---
+
+<html lang="en" class="scroll-smooth bg-gradient-to-b from-slate-700 to-slate-900 text-white font-body bg-cover">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Bevan&family=Righteous&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <SEO title={ pageTitle } description={ SeoDescription } />
+</head>
+<body class="min-h-screen">
+    <Header />
+    <slot />
+    <Footer />
+</body>
+</html>
