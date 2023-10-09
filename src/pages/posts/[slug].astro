@@ -1,0 +1,42 @@
+---
+import { wpquery } from "../../lib/api";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+// export const prerender = true;
+
+
+
+export async function getStaticPaths() {
+    const data = await wpquery({
+        query: `
+        query LoadAllPosts {
+            posts {
+                nodes {
+                    title
+                    slug
+                    content
+                }
+                
+            }
+        }
+        `,
+    });
+    
+    return data.posts.nodes.map((post: any) => {
+        return {
+            params: { slug: post.slug },
+            props: { post },
+        };
+    });
+}
+
+const { post } = Astro.props;
+console.log(post)
+
+---
+
+<BaseLayout title={post.title}>
+    <section class="prose prose-neutral mx-auto py-12 min-h-screen">
+        <h1>{post.title}</h1>
+        <Fragment set:html={post.content}>
+    </section>
+</BaseLayout>

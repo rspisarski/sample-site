@@ -1,0 +1,40 @@
+---
+import { wpquery } from "../lib/api";
+const data = await wpquery({
+    query: `
+    query AllMoviesQuery {
+        movies {
+            nodes {
+                id
+                slug
+                title
+                movieFields {
+                    movieTitle
+                    rating
+                    releaseDate
+                }
+            }
+        }
+    }
+    `,
+});
+
+const posts = data.movies.nodes;
+---
+
+<div class="container">
+    <h1 class="text-center mt-12 mb-4 text-3xl">Astro + WordPress 🚀</h1>
+    <div class="grid grid-cols-2 gap-4">
+        {
+            posts.map((post: any) => (
+            <a
+            href={`/posts/${post.slug}`}
+            class="p-6 bg-white text-slate-800 rounded-xl block"
+            >
+            <h2 class="text-lg" set:html={post.movieFields.movieTitle} />
+            <div><span>{post.movieFields.rating}</span>/5</div>
+        </a>
+        ))
+    }
+</div>
+</div>

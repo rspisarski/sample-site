@@ -1,0 +1,11 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Movies from "../components/Movies.astro";
+
+const pageTitle = "My Favorite Movies";
+const SeoDescription = "a list of all my favorite movies";
+---
+
+<BaseLayout pageTitle={pageTitle} SeoDescription={SeoDescription}>
+    <Movies />
+</BaseLayout>

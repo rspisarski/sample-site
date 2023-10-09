@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
+import Posts from "../components/Posts.astro";
 
 const pageTitle = "Astro Sample Website";
 const SeoDescription = "This is the SEO description";
@@ -9,4 +10,5 @@ const SeoDescription = "This is the SEO description";
 
 <BaseLayout pageTitle={pageTitle} SeoDescription={SeoDescription}>
 	<Hero />
+	<Posts />
 </BaseLayout>
