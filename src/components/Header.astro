@@ -5,25 +5,28 @@ import Navigation from './Navigation.astro';
 
 ---
 
-<header class="flex justify-between items-center p-6 md:p-12 md:align-stretch sticky top-0 gap-3 md:gap-0 z-50 w-full">
-    <div class="h-16 md:h-auto w-52 hover:bg-gradient-to-r bg-gradient-to-l from-teal-400 to-teal-500 rounded-xl md:rounded-3xl flex items-center shadow-xl">
+<header class="flex flex-col lg:flex-row justify-between items-center p-6 md:p-12 md:align-stretch sticky top-0 gap-4 lg:gap-0 z-50 w-full">
+    
+    <div class="h-24 md:h-auto w-full lg:w-52 hover:bg-gradient-to-r bg-gradient-to-l from-teal-400 to-teal-500 rounded-xl md:rounded-3xl flex items-center shadow-xl">
         <a class="text-center md:h-full w-full block px-2 md:p-3 font-display text-sm md:text-xl" href="/"> Ricahrd Pisarski </a>
     </div>
-    <div class="h-auto items-center uppercase tracking-widest text-xs">
+    
+    <div class="h-screen lg:h-auto fixed left-0 top-0 lg:static bg-purple-950 lg:bg-purple/0 items-center uppercase tracking-widest text-xs w-full lg:w-auto hidden lg:block" id="nav">
         <Navigation />
     </div>
-    <!-- <div class="shadow-xl h-16 md:h-auto w-52 uppercase tracking-widest font-bold bg-slate-800 hover:bg-gradient-to-r from-violet-600 to-violet-500 transition-colors rounded-xl md:rounded-3xl px-6 flex items-center justify-between gap-2 flex-row-reverse text-xs" id="hamburger">
+    <div class="shadow-xl w-full lg:hidden h-24 md:h-auto uppercase tracking-widest font-bold bg-slate-800 hover:bg-gradient-to-r from-violet-600 to-violet-500 transition-colors rounded-xl md:rounded-full px-6 py-2 flex items-center justify-between gap-2 flex-row-reverse text-xs" id="hamburger">
         <div class="hamburger">
             <div class="hamburger__line bg-slate-200"></div>
             <div class="hamburger__line bg-slate-200"></div>
             <div class="hamburger__line bg-slate-200"></div>
         </div>
         <span class="">Menu</span>
-    </div> -->
+    </div>
 </header>
 
 
-<style>
+<style is:global>
+    .menu_open #nav { display: block; }
     #hamburger { 
         cursor: pointer;
     }
@@ -60,6 +63,7 @@ import Navigation from './Navigation.astro';
         
         hamburger.addEventListener("click", function () {
             hamburger.classList.toggle("hamburger__active");
+            document.body.classList.toggle("menu_open");
         });
     });
 </script>

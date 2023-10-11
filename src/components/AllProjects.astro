@@ -5,7 +5,7 @@ const projects = await Astro.glob('../pages/portfolio/*.md');
 ---
 <!-- Renders an <article> for the first 5 blog posts -->
 <section class="container my-24">
-  <div class="grid grid-cols-3 gap-10">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
     {projects.map((project) => (
     <ProjectCard project={project} />
     ))}
