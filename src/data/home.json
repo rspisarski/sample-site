@@ -2,6 +2,6 @@
   "hero_title": "Home Page",
   "hero_image": "/src/assets/me.jpg",
   "title": "My beard is not this good.",
-  "image": "/src/assets/me.jpg",
+  "image": "/me.jpg",
   "description": "Specialist in a variety of front-end and back-end technologies, including HTML, CSS, JavaScript, and various frameworks like React and Node.js. My commitment to clean, efficient code and continuous learning helps me stay at the forefront of web development trends."
 }

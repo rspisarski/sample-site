@@ -13,7 +13,6 @@ export default defineConfig({
           name: 'git-gateway',
           branch: 'main',
         },
-        media_folder: 'src/assets',
         collections: [
           {
             name: 'blog',
