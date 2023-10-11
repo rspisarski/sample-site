@@ -1,0 +1,19 @@
+{
+  "navbar_links": [
+    {
+      "nav_title": "Resume",
+      "url": "/resume",
+      "target": "_self"
+    },
+    {
+      "nav_title": "Portfolio",
+      "url": "/portfolio",
+      "target": "_self"
+    },
+    {
+      "nav_title": "Blog",
+      "url": "/blog",
+      "target": "_self"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "jobs": [
+    {
+      "position": "Senior Web Developer",
+      "company": "Antenna Group",
+      "start_date": "Mar 2021",
+      "end_date": "Present",
+      "duties": [
+        {
+          "duty": "Develop custom WordPress theme"
+        },
+        {
+          "duty": "Meet accessibility requirements"
+        }
+      ]
+    },
+    {
+      "duties": [
+        {
+          "duty": "Meet with clients to discuss website design and function."
+        },
+        {
+          "duty": "Designing and developing the website front-end. "
+        },
+        {
+          "duty": "Research and implement SEO friendly website architecture."
+        },
+        {
+          "duty": "Designing and managing the website back-end including database and server integration. "
+        },
+        {
+          "duty": "Development of custom WordPress themes and plugins."
+        }
+      ],
+      "position": "Web Designer/Developer",
+      "company": "Momentum",
+      "start_date": "Jul 2016",
+      "end_date": "Mar 2021"
+    }
+  ]
+}

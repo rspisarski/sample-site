@@ -1,0 +1,19 @@
+---
+import H2 from "../components/utils/H2.astro";
+const { company, position, duties, startDate, endDate } = Astro.props;
+console.log(duties);
+---
+
+<div class="bg-white/5 p-12 backdrop-blur-md rounded-3xl shadow-xl border-2 border-cyan-500">
+    <H2 title={position} />
+    <div class="flex gap-4 items center font-display mb-6">
+        <p class="text-white text-lg">{company}</p>
+        <p class="text-lg text-white"><span>{startDate}</span> - <span>{endDate}</span></p>
+    </div>
+    <ul class="pl-7 text-purple-400 transition-all">
+        {duties.map((job: any) => ( 
+        <li class="list-disc"><span class="text-white">{job.duty}</span></li>
+        ))
+        }
+    </ul>
+</div>

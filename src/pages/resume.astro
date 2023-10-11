@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import JobCard from "../components/JobCard.astro";
+import resumeData from '../data/resume.json';
+import H1 from "../components/utils/H1.astro";
+
+const workHistory = resumeData.jobs;
+console.log(workHistory);
+
+const pageTitle = "Resume";
+const SeoDescription = "This is the SEO description";
+---
+
+<BaseLayout pageTitle={pageTitle} SeoDescription={SeoDescription}>
+<div class="container my-12">
+    <div class="text-center mb-12">
+        <H1 title={ pageTitle } />
+    </div>
+    
+    <div class="flex flex-col gap-12">
+        {workHistory.map((job: any) => ( 
+            <JobCard company={job.company} position={job.position} duties={job.duties} startDate={job.start_date} endDate={job.end_date} />
+            ))
+        }
+    </div>
+    
+</div>
+    
+</BaseLayout>

@@ -6,7 +6,7 @@ import Footer from "../components/Footer.astro";
 const { pageTitle, SeoDescription } = Astro.props;
 ---
 
-<html lang="en" class="scroll-smooth bg-gradient-to-b from-slate-700 to-slate-900 text-white font-body bg-cover">
+<html lang="en" class="scroll-smooth bg-gradient-to-b from-fuchsia-950 to-violet-950 text-white font-body bg-cover">
 <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -17,7 +17,7 @@ const { pageTitle, SeoDescription } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Bevan&family=Righteous&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <SEO title={ pageTitle } description={ SeoDescription } />
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen flex flex-col">
     <Header />
     <slot />
     <Footer />
